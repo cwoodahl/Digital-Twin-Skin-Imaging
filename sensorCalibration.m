@@ -1,33 +1,8 @@
-%% s_sensorComparison
-%
-% Run the same OI through multiple sensors, just for comparison.  BW
-% used this script to create the sensor images for the Ford
-% presentation.
-%
-% Combines two test charts:  Macbeth and a sweep frequency.
-%
-%
+%This code is designed to run an scene and illuminant through a sensor and output
+%sensor values and a processed image from the sensor.
 
-%%
 %ieInit
 
-%% Make a combined iimage
-
-% MCC side
-patchSize = 96;
-%sceneC = sceneCreate('macbethD65',patchSize);
-% sz = sceneGet(sceneC,'size');
-% sceneC = sceneSet(sceneC,'resize',round([sz(1), sz(2)/2]));
-% sceneWindow(sceneC);
-% 
-% % Sweep frequency side
-% sceneS = sceneCreate('sweep frequency',sz(1),sz(1)/16);
-% sceneWindow(sceneS);
-% 
-% % Combine
-% scene = sceneCombine(sceneC,sceneS,'direction','horizontal');
-%
-%ieInit;
 patchSize = 24;
 wavelength = 300:4:800;
 reflectances1 = load('Ep1_v4.mat');
@@ -79,7 +54,6 @@ scene = sceneCombine(scene,sceneCustom1,'direction','horizontal');
 scene = sceneCombine(scene,sceneCustom2,'direction','horizontal');
 
 
-
 hfov = 20;
 scene = sceneSet(scene,'fov',hfov);
 vfov  = sceneGet(scene,'v fov');
@@ -94,7 +68,7 @@ oiWindow(oi);
 %% Now run through some sensors
 
 %sensorList = {'bayer-rggb','imx363','rgbw','mt9v024','imec44','cyym','monochrome'};
-
+%pick a sensor from list, or other iSetCam/personal source
 sensorList = {'cyym'};
 
 
