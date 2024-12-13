@@ -1,5 +1,6 @@
 %This code can be used to pull raw pixel data or image data from a sensor
-%or processed imaged
+%or processed imaged. Multiple graphs are generated depending on specific
+%interests, plot necessary graphs.
 
 sensorChoice = sensorGet(sensor,'name');
 dataIPcurr = ipGet(ip,'data display');
