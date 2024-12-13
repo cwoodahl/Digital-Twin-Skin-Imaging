@@ -1,4 +1,4 @@
-multiple_layers.m is developed from file in github repository: https://github.com/PranilJ/skin_reflectance_mcmatlab. 
+Our multiple_layers.m is an edited version of the file in github repository: https://github.com/PranilJ/skin_reflectance_mcmatlab. 
 This uses MCMatlab versionn 3.6.2 to simulate skin reflectance. 
 Mu absorption and scattering, and geometries can be adjusted to test different skin conditions.
 
